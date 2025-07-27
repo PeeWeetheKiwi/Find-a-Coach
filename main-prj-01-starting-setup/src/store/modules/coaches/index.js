@@ -15,7 +15,7 @@ export default {
                         areas: ['frontend', 'backend', 'career'],
                         description:
                             "I'm Maximilian and I've worked as a freelance web developer for years. Let me help you become a developer as well!",
-                        hourlyRate: 30
+                        hourlyRate: 3000
                     },
                     {
                         id: 'c2',
@@ -24,9 +24,18 @@ export default {
                         areas: ['frontend', 'career'],
                         description:
                             'I am Julie and as a senior developer in a big tech company, I can help you get your first job or progress in your current role.',
-                        hourlyRate: 30
+                        hourlyRate: 5000
+                    },
+                    {
+                        id: 'c3',
+                        firstName: 'David',
+                        lastName: 'Blaine',
+                        areas: ['backend', 'career'],
+                        description:
+                            'Wanna see a magic trick?',
+                        hourlyRate: 70000
                     }
-                ],
+                ]
 
 
         };
