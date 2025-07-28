@@ -26,15 +26,6 @@ export default {
                             'I am Julie and as a senior developer in a big tech company, I can help you get your first job or progress in your current role.',
                         hourlyRate: 5000
                     },
-                    {
-                        id: 'c3',
-                        firstName: 'David',
-                        lastName: 'Blaine',
-                        areas: ['backend', 'career'],
-                        description:
-                            'Wanna see a magic trick?',
-                        hourlyRate: 70000
-                    }
                 ]
 
 
