@@ -1,4 +1,5 @@
 <template>
+  <div>
   <li>
     <h3> {{ fullName }}</h3>
     <h4>${{ rate }}/hour</h4>
@@ -10,6 +11,7 @@
       <base-button link :to="coachDetailsLink"> View Details </base-button>
     </div>
   </li>
+  </div>
 </template>
 
 <script>

@@ -1,10 +1,12 @@
 <template>
+  <div>
   <section>
     <base-card>
       <header>
         <h2>Requests Received</h2>
       </header>
-      <ul v-if="hasRequests">
+      <base-spinner v-if="isLoading"></base-spinner>
+      <ul v-else-if="hasRequests && !isLoading">
         <request-item v-for="req in receivedRequests"
                       :key="req.id" :email="req.userEmail"
                       :message="req.message"></request-item>
@@ -12,11 +14,18 @@
       <h3 v-else>You haven't received any requests yet! No one likes you, loser!</h3>
     </base-card>
   </section>
+  </div>
 </template>
 
 <script>
 import RequestItem from '@/components/requests/RequestItem.vue';
+import BaseSpinner from "@/components/ui/BaseSpinner.vue";
 export default {
+  data() {
+    return {
+      isLoading: false
+    }
+  },
   computed: {
     receivedRequests() {
       return this.$store.getters['requests/requests'];
@@ -26,7 +35,18 @@ export default {
     }
   },
   components: {
+    BaseSpinner,
     RequestItem
+  },
+  methods: {
+    async loadRequests() {
+      this.isLoading = true;
+      await this.$store.dispatch('requests/fetchRequests');
+      this.isLoading = false;
+    }
+  },
+  created() {
+    this.loadRequests();
   }
 }
 </script>

@@ -1,4 +1,5 @@
 <template>
+  <div>
   <base-card>
     <h2>Find Your Coach!</h2>
     <span>
@@ -14,6 +15,7 @@
       <label for="career">Career</label>
     </span>
   </base-card>
+  </div>
 </template>
 
 <script>

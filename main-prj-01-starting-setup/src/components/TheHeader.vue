@@ -1,4 +1,5 @@
 <template>
+  <div>
   <header>
     <nav>
       <h1><router-link to="/">Find a Coach</router-link></h1>
@@ -10,6 +11,7 @@
       </ul>
     </nav>
   </header>
+  </div>
 </template>
 
 <style scoped>

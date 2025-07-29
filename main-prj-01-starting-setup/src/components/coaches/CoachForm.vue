@@ -1,4 +1,5 @@
 <template>
+  <div>
   <form @submit.prevent="submitForm">
     <div class="form-control" :class="{ invalid: validationError }">
       <label for="firstname">First Name</label>
@@ -34,6 +35,7 @@
     <base-button>Register</base-button>
   </form>
   <p v-if="validationError" class="validation-error">Check Yo Fields, Fool!</p>
+  </div>
 </template>
 
 <script>
