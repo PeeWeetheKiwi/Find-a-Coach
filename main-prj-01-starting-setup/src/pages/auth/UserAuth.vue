@@ -93,6 +93,8 @@ export default {
             password: this.password,
           })
         }
+        const redirectUrl = '/' + (this.$router.replace.redirect || 'coaches');
+        this.$router.replace(redirectUrl);
       } catch (err) {
         this.error = (err.message || "Failed to authenticate, try later.");
       }
